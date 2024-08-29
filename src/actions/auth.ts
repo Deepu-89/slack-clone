@@ -4,8 +4,6 @@ import { supabaseServerClient } from "@/supabase/supabaseServerClient";
 import { Provider } from "@supabase/supabase-js";
 import { redirect } from "next/navigation";
 
-export async function registerWithEmail(formstate: null, email: string) {}
-
 export async function socialAuth(provider: Provider) {
   const supabase = supabaseServerClient();
   const { data, error } = await supabase.auth.signInWithOAuth({
